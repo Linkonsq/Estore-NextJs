@@ -4,7 +4,7 @@ CREATE TABLE "Product" (
     "name" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "category" TEXT NOT NULL,
-    "image" TEXT[],
+    "images" TEXT[],
     "brand" TEXT NOT NULL,
     "description" TEXT NOT NULL,
     "stock" INTEGER NOT NULL,
