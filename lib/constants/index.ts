@@ -20,9 +20,9 @@ export const signUpDefaultValues = {
 };
 
 export const shippingAddressDefaultValues = {
-  fullName: "Linkon Siddique",
-  streetAddress: "123 Main St",
-  city: "Dhaka",
-  postalCode: "1941",
-  country: "Bangladesh",
+  fullName: "",
+  streetAddress: "",
+  city: "",
+  postalCode: "",
+  country: "",
 };
