@@ -8,8 +8,8 @@ export const LATEST_PRODUCTS_LIMIT = Number(
 );
 
 export const signInDefaultValues = {
-  email: "admin@example.com",
-  password: "12345678",
+  email: "",
+  password: "",
 };
 
 export const signUpDefaultValues = {
