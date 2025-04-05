@@ -95,6 +95,7 @@ export const config = {
     authorized({ request }: any) {
       // Check for session cart cookie
       if (!request.cookies.get("sessionCartId")) {
+        // Generate new session cart id cookie
         const sessionCartId = crypto.randomUUID();
 
         // Clone the request headers
