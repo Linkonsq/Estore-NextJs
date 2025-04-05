@@ -8,8 +8,8 @@ export const LATEST_PRODUCTS_LIMIT = Number(
 );
 
 export const signInDefaultValues = {
-  email: "",
-  password: "",
+  email: "admin@example.com",
+  password: "12345678",
 };
 
 export const signUpDefaultValues = {
@@ -17,4 +17,12 @@ export const signUpDefaultValues = {
   email: "",
   password: "",
   confirmPassword: "",
+};
+
+export const shippingAddressDefaultValues = {
+  fullName: "Linkon Siddique",
+  streetAddress: "123 Main St",
+  city: "Dhaka",
+  postalCode: "1941",
+  country: "Bangladesh",
 };
