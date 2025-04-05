@@ -1,11 +1,11 @@
 "use server";
 
-//import { signInFormSchema } from "../validators";
-import { auth, signIn, signOut } from "@/auth";
+import { signInFormSchema } from "@/lib/validator";
+import { signIn, signOut } from "@/auth";
 // import { isRedirectError } from "next/dist/client/components/redirect-error";
-import { revalidatePath } from "next/cache";
-import { Prisma } from "@prisma/client";
-import { prisma } from "@/db/prisma";
+// import { revalidatePath } from "next/cache";
+// import { Prisma } from "@prisma/client";
+// import { prisma } from "@/db/prisma";
 
 // Sign in the user with credentials
 export async function signInWithCredentials(
@@ -17,14 +17,13 @@ export async function signInWithCredentials(
       email: formData.get("email"),
       password: formData.get("password"),
     });
-
     await signIn("credentials", user);
-
     return { success: true, message: "Signed in successfully" };
   } catch (error) {
-    if (isRedirectError(error)) {
-      throw error;
-    }
+    console.log(error);
+    // if (isRedirectError(error)) {
+    //   throw error;
+    // }
     return { success: false, message: "Invalid email or password" };
   }
 }
