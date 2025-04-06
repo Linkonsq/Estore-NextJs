@@ -17,6 +17,7 @@ import { ShippingAddress } from "@/types";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import Image from "next/image";
+import PlaceOrderForm from "./place-order-form";
 
 const PlaceOrderPage = async () => {
   const cart = await getMyCart();
@@ -127,6 +128,7 @@ const PlaceOrderPage = async () => {
                 <div>Total</div>
                 <div>{formatCurrency(cart.totalPrice)}</div>
               </div>
+              <PlaceOrderForm />
             </CardContent>
           </Card>
         </div>
